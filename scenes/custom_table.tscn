@@ -1,0 +1,159 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfepmnhn5memf"]
+
+[ext_resource type="Texture2D" uid="uid://dx70phd4lm35g" path="res://icon.svg" id="1_jp5yp"]
+[ext_resource type="Script" path="res://scenes/custom_table.gd" id="1_px0mb"]
+[ext_resource type="Script" path="res://scenes/resize_handle.gd" id="2_n7gui"]
+[ext_resource type="Script" path="res://scenes/column.gd" id="2_ukev5"]
+
+[node name="CustomTable" type="HBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 17.0
+offset_top = 11.0
+offset_right = 17.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.95327, 0.95327)
+theme_override_constants/separation = 0
+script = ExtResource("1_px0mb")
+
+[node name="Column" type="VBoxContainer" parent="."]
+layout_mode = 2
+script = ExtResource("2_ukev5")
+
+[node name="HeaderCell" type="Panel" parent="Column"]
+custom_minimum_size = Vector2(64.445, 43.27)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Column/HeaderCell"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Entity"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CellWithHandle" type="Panel" parent="Column"]
+custom_minimum_size = Vector2(64.445, 43.27)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Column/CellWithHandle"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Entity"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MoveUpButton" type="Button" parent="Column/CellWithHandle"]
+layout_mode = 0
+offset_left = -9.44119
+offset_top = 0.205935
+offset_right = 126.559
+offset_bottom = 136.206
+scale = Vector2(0.0815819, 0.0815819)
+icon = ExtResource("1_jp5yp")
+
+[node name="ResizeHandle" type="Button" parent="."]
+layout_mode = 2
+action_mode = 0
+script = ExtResource("2_n7gui")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 2
+script = ExtResource("2_ukev5")
+
+[node name="HeaderCell" type="Panel" parent="VBoxContainer2"]
+custom_minimum_size = Vector2(133.13, 43.27)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer2/HeaderCell"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Responsability"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResizeHandle2" type="Button" parent="."]
+layout_mode = 2
+action_mode = 0
+script = ExtResource("2_n7gui")
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="."]
+layout_mode = 2
+script = ExtResource("2_ukev5")
+
+[node name="HeaderCell" type="Panel" parent="VBoxContainer3"]
+custom_minimum_size = Vector2(90.27, 43.27)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer3/HeaderCell"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Relations"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResizeHandle3" type="Button" parent="."]
+layout_mode = 2
+action_mode = 0
+script = ExtResource("2_n7gui")
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="."]
+layout_mode = 2
+script = ExtResource("2_ukev5")
+
+[node name="HeaderCell" type="Panel" parent="VBoxContainer4"]
+custom_minimum_size = Vector2(133.13, 43.27)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer4/HeaderCell"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "GD Parameters"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResizeHandle4" type="Button" parent="."]
+layout_mode = 2
+action_mode = 0
+script = ExtResource("2_n7gui")
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="."]
+layout_mode = 2
+script = ExtResource("2_ukev5")
+
+[node name="HeaderCell" type="Panel" parent="VBoxContainer5"]
+custom_minimum_size = Vector2(133.13, 43.27)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer5/HeaderCell"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Public functions"
+horizontal_alignment = 1
+vertical_alignment = 1
